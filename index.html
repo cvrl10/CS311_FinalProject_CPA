@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+    <head>
+        <title>Unit Converter</title>
+        <link rel="stylesheet" href="css/converter.css"/>
+    </head>
+    <body>
+
+        <div id="instruction">
+            Click on the units to convert, once selected an input textbox is displayed to enter data after data is entered a result box is displayed.
+            Selecting the other radio button in the group converts the input data in the other direction, e.g. selecting meters to feet and imputing
+            1 meter would return 3.28 feet, with no change in the input and selecting feet to meters would now return 1 feet = 0.30 meters.
+        </div>
+    
+
+        <div class="container">
+
+            <!--Meters to Feet-->
+
+            <div class="left">
+                <input type="radio" id="meters-to-feet" name="meters" onchange="suffix(id)" onclick="display('meters'), calculate('meters-input')" />
+                <label for="meters-to-feet"><strong>Meter(s) to Feet</strong></label>
+                <br />
+                <div id="meters-input-container" hidden>
+                    <input id="meters-input" oninput="calculate(id)" />
+                    <label id="meters-input-label" for="meters-input"></label>
+                </div>
+            </div>
+            <div class="right">
+                <input type="radio" id="feet-to-meters" name="meters" onchange="suffix(id)" onclick="display('meters'), calculate('meters-input')" />
+                <label for="feet-to-meters"><strong>Feet to Meter(s)</strong></label>
+                <br />
+                <div id="meters-output-container" hidden>
+                    <input id="meters-output" readonly />
+                    <label id="meters-output-label" for="meters-output"></label>
+                </div>
+            </div>
+
+            <!--Kilometers to Miles-->
+
+            <div class="left">
+                <input type="radio" id="kilometers-to-miles" name="kilometers" onchange="suffix(id)" onclick="display('kilometers'), calculate('kilometers-input')" />
+                <label for="kilometers-to-miles"><strong>Kilometer(s) to Mile(s)</strong></label>
+                <br />
+                <div id="kilometers-input-container" hidden>
+                    <input id="kilometers-input" oninput="calculate(id)" />
+                    <label id="kilometers-input-label" for="kilometers-input"></label>
+                </div>
+            </div>
+            <div class="right">
+                <input type="radio" id="miles-to-kilometers" name="kilometers" onchange="suffix(id)" onclick="display('kilometers'), calculate('kilometers-input')" />
+                <label for="miles-to-kilometers"><strong>Mile(s) to Kilometer(s)</strong></label>
+                <br />
+                <div id="kilometers-output-container" hidden>
+                    <input id="kilometers-output" readonly />
+                    <label id="kilometers-output-label" for="kilometers-output"></label>
+                </div>
+            </div>
+
+            <!--Celsius to Fahrenheit-->
+
+                <div class="left">
+                    <input type="radio" id="celsius-to-fahrenheit" name="celsius" onchange="suffix(id)" onclick="display('celsius'), calculate('celsius-input')" />
+                    <label for="celsius-to-fahrenheit"><strong>Celsius to Fahrenheit</strong></label>
+                    <br />
+                    <div id="celsius-input-container" hidden>
+                        <input id="celsius-input" oninput="calculate(id)" />
+                        <label id="celsius-input-label" for="celsius-input"></label>
+                    </div>
+                </div>
+                <div class="right">
+                    <input type="radio" id="fahrenheit-to-celsius" name="celsius" onchange="suffix(id)" onclick="display('celsius'), calculate('celsius-input')" />
+                    <label for="fahrenheit-to-celsius"><strong>Fahrenheit to Celsius</strong></label>
+                    <br />
+                    <div id="celsius-output-container" hidden>
+                        <input id="celsius-output" readonly />
+                        <label id="celsius-output-label" for="celsius-output"></label>
+                    </div>
+                </div>
+
+            <!--Kilogram to Pounds-->
+
+                <div class="left">
+                    <input type="radio" id="kilogram-to-pounds" name="kilogram" onchange="suffix(id)" onclick="display('kilogram'), calculate('kilogram-input')" />
+                    <label for="kilogram-to-pounds"><strong>Kilogram to Pound(s)</strong></label>
+                    <br />
+                    <div id="kilogram-input-container" hidden>
+                        <input id="kilogram-input" oninput="calculate(id)" />
+                        <label id="kilogram-input-label" for="kilogram-input"></label>
+                    </div>
+                </div>
+                <div class="right">
+                    <input type="radio" id="pounds-to-kilogram" name="kilogram" onchange="suffix(id)" onclick="display('kilogram'), calculate('kilogram-input')" />
+                    <label for="pounds-to-kilogram"><strong>Pound(s) to Kilogram</strong></label>
+                    <br />
+                    <div id="kilogram-output-container" hidden>
+                        <input id="kilogram-output" readonly />
+                        <label id="kilogram-output-label" for="kilogram-output"></label>
+                    </div>
+                </div>
+
+            <!--Grams to ounces-->
+
+                <div class="left">
+                    <input type="radio" id="grams-to-ounces" name="grams" onchange="suffix(id)" onclick="display('grams'), calculate('grams-input')" />
+                    <label for="grams-to-ounces"><strong>Gram(s) to Ounce(s)</strong></label>
+                    <br />
+                    <div id="grams-input-container" hidden>
+                        <input id="grams-input" oninput="calculate(id)" />
+                        <label id="grams-input-label" for="grams-input"></label>
+                    </div>
+                </div>
+                <div class="right">
+                    <input type="radio" id="ounces-to-grams" name="grams" onchange="suffix(id)" onclick="display('grams'), calculate('grams-input')" />
+                    <label for="ounces-to-grams"><strong>Ounce(s) to Gram(s)</strong></label>
+                    <br />
+                    <div id="grams-output-container" hidden>
+                        <input id="grams-output" readonly />
+                        <label id="grams-output-label" for="grams-output"></label>
+                    </div>
+                </div>
+
+        </div>
+        
+        <script src="js/converter.js"></script>
+
+    </body>
+</html>

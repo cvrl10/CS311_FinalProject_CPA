@@ -1,0 +1,26 @@
+body
+{
+    font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+#instruction
+{
+	display: flex;
+	margin: 25px;
+	color: red;
+	border: solid;
+	padding: 10px;
+}
+.container
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.left
+{
+    justify-self: right;
+}
+.right
+{
+    justify-self: left;
+}
